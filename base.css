@@ -124,8 +124,9 @@ h2 {
 
 h3 {
   font-size: 1.953rem;
-  letter-spacing: -0.09rem;
-  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  line-height: 2.2rem;
+  margin-top: 20px;
 }
 
 h4 {
@@ -147,7 +148,7 @@ h6 {
 }
 
 p {
-  margin-bottom: 1.563rem;
+  margin-bottom: auto;
 }
 
 p > *:last-child {

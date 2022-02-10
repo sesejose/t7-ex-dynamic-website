@@ -33,7 +33,7 @@ function handleSeasons(data) {
           </a>
         </template>
 */
-function showSeason(seasons, product) {
+function showSeason(product) {
   // Grab the product. We We select by ID the content. We define the variable because we're going to use it then.
   const template = document.querySelector("#seasonTemplate").content;
   //Clone it (the product, the template). It is also a variable because we will use it then.
@@ -41,7 +41,7 @@ function showSeason(seasons, product) {
 
   //changing the name of the Seasons
   //I select the class and then change its content > the prefix and then ...
-  clone.querySelector(".seasonName").textContent = `${seasons.season}`;
+  clone.querySelector(".seasonName").textContent = `${product.season}`;
 
   //Linking the Ctegory by season https://kea-alt-del.dk/t7/api/seasons
   clone
