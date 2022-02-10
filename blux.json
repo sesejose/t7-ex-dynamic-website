@@ -1,0 +1,12 @@
+{
+  "name": "Blux",
+  "powers": ["jump higher", "run faster", "disappear"],
+  "primaryNemesis": "Superman",
+  "image": "https://strakers.files.wordpress.com/2007/01/venom.jpg",
+  "lifePercentage": 200,
+  "dob": {
+    "day": 1,
+    "month": 2,
+    "year": 200
+  }
+}
