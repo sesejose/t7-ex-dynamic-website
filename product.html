@@ -22,7 +22,7 @@
         <ul id="mainmenu" class="menu-list">
           <li><a href="#">Categories</a></li>
           <li><a href="#">Brands</a></li>
-          <li><a href="category.html">Seasons</a></li>
+          <li><a href="index.html">Seasons</a></li>
         </ul>
       </nav>
     </header>
@@ -31,9 +31,9 @@
       <ol class="breadcrumbs">
         <li><a href="index.html">Home</a></li>
         <li>></li>
-        <li><a href="category.html">Seasons</a></li>
+        <li><a href="index.html">Seasons</a></li>
         <li>></li>
-        <li class="brand"><a href="productlist.html">Summer</a></li>
+        <li class="season"><a href="productlist.html">Summer</a></li>
         <li>></li>
         <li class="productname">Sahara Team India Fanwear Round Neck Jersey</li>
       </ol>
@@ -49,7 +49,16 @@
       <section class="purchaseBox">
         <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
         <p>Nike | Tshirts</p>
+        <hr />
         <form>
+          <p class="price"><span>Prev.</span> DKK 1595,-</p>
+          <div class="discounted">
+            <p>Now DKK 1560,-</p>
+            <p id="discount" class="discount">-34%</p>
+          </div>
+
+          <hr />
+
           <label
             >Choose a size
             <select name="size">
@@ -59,22 +68,39 @@
               <option>XL</option>
             </select>
           </label>
+
+          <hr />
+
           <button>Add to basket</button>
         </form>
       </section>
 
       <section class="info">
         <h2>Product Information</h2>
-        <dl>
+        <div class="description">
+          <div class="mod">
+            <span>Model name</span>
+            <p>Sahara Team India Fanwear Round Neck Jersey</p>
+          </div>
+          <div class="cat">
+            <span>Category</span>
+            <p>Category</p>
+          </div>
+          <div class="no">
+            <span>Inventory No</span>
+            <p>ID</p>
+          </div>
+        </div>
+        <!-- <dl>
           <dt>Model name</dt>
           <dd>Sahara Team India Fanwear Round Neck Jersey</dd>
           <dt>Color</dt>
           <dd>Blue</dd>
           <dt>Inventory number</dt>
           <dd>1163</dd>
-        </dl>
-        <h1>Nike</h1>
-        <p>Nike, creating experiences for today’s athlete</p>
+        </dl> -->
+        <h2 class="brand">Nike</h2>
+        <p>Creating experiences for today’s athlete</p>
       </section>
     </main>
 

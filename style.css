@@ -16,8 +16,8 @@ html {
   margin: 0;
 }
 
-footer {
-  background-color: #2a2b2a;
+.p20 {
+  padding: 20px;
 }
 
 .mainNav {
@@ -93,7 +93,7 @@ nav ul li {
 nav li a:link {
   /*Mobile*/
   text-decoration: none;
-  color: #2a2b2a;
+  color: #fff;
   letter-spacing: 0.125em;
   text-transform: uppercase;
   cursor: pointer;
@@ -151,21 +151,22 @@ nav li a:link {
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 0;
 }
-.productlist main h2 {
+main h2 {
   grid-column: 1/-1;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
+
 .productlist article h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   flex-grow: 3;
-  line-height: 1.2rem;
+  line-height: 1.45rem;
 }
 .productlist article > * {
   margin: 0;
   font-size: 0.9rem;
 }
 .productlist article {
-  padding: 20px;
+  /* padding: 20px; */
   border-top: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
 }
@@ -175,7 +176,7 @@ nav li a:link {
   font-size: 0.85rem;
 }
 .price {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -194,9 +195,30 @@ nav li a:link {
   padding: 1rem;
 }
 
+.discount {
+  padding: 10px;
+  border-radius: 10px !important;
+  margin-right: 0px !important;
+}
+
 .discounted {
+  display: flex;
   font-size: 0.75rem;
   font-weight: 700;
+  justify-content: space-between;
+}
+
+.purchaseBox .discounted {
+  display: flex;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.purchaseBox .price {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #ababab;
+  font-weight: 400;
 }
 
 .productlist article .discounted,
@@ -219,6 +241,7 @@ nav li a:link {
 .discounted > p {
   margin-bottom: auto;
   border-radius: 10px 0px 0px 10px;
+  font-size: 0.9rem;
 }
 .productlist article.onSale .price span {
   display: initial;
@@ -231,7 +254,7 @@ nav li a:link {
 }
 .discounted p:last-child {
   background: var(--off-color);
-  padding: 0.2rem;
+  padding: 0.5rem;
   margin-right: -20px;
 }
 
@@ -246,7 +269,7 @@ nav li a:link {
 .breadcrumbs {
   list-style-type: none;
   display: flex;
-  border-top: 1px solid var(--border-color);
+  /* border-top: 1px solid var(--border-color); */
   border-bottom: 1px solid var(--border-color);
   padding: 10px 0px 10px 0px;
   font-size: 0.85rem;
@@ -279,9 +302,32 @@ ol.breadcrumbs li a {
   color: var(--background-color);
   padding: 1rem;
 }
+
+form p {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.discounted p .discount {
+  float: right;
+}
+
+.description {
+  display: flex;
+  flex-flow: column;
+}
+
+.description div {
+  width: 100%;
+}
+
+.description div span {
+  font-weight: 700;
+}
+
 .info {
   padding: 1rem;
 }
+
 .product select {
   min-width: 100px;
 }
@@ -295,12 +341,58 @@ ol.breadcrumbs li a {
 }
 .purchaseBox form label {
   gap: 1rem;
+  margin: 1rem 0 1rem 0;
 }
 .purchaseBox button {
   display: block;
-  margin-top: 1rem;
-  width: 100%;
+  /* margin-top: 1rem; */
+  width: fit-content;
+  background-color: var(--off-color); /* Green */
+  color: #fff;
+  padding: 20px 37px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  /* font-size: 16px; */
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: var(--off-color);
+  font-size: 2.25rem;
+  font-weight: 700;
+  /* padding-left: 80px; */
+  position: absolute;
+  z-index: 2;
+}
+
+.overlay {
+  width: 100%;
+  height: 25vh;
+  background-color: #2a2b2a;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 1;
+}
+
+.seasonName {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25vh;
+  border-bottom: 1px solid var(--border-color);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+}
+
 dt {
   font-weight: 700;
 }
@@ -318,9 +410,20 @@ dt {
 }
 
 @media screen and (min-width: 1200px) {
+  nav li a:link {
+    /* Desktop */
+    color: #2a2b2a;
+  }
+
   nav {
     width: 100%;
   }
+
+  .description {
+    display: flex;
+    flex-flow: row;
+  }
+
   nav ul {
     grid-column: 2 / 3;
     justify-content: end;
@@ -359,7 +462,7 @@ dt {
     grid-column: 1 / 2;
     grid-row: 2 / -1;
     width: 100%;
-    border-right: 1px solid var(--border-color);
+    /* border-right: 1px solid var(--border-color); */
   }
 
   .purchaseBox {
@@ -373,9 +476,29 @@ dt {
     width: 100%;
   }
 
+  .info h2 {
+    font-size: 1.75rem;
+    letter-spacing: normal;
+  }
+
+  .description {
+    display: flex;
+    /* /* flex-flow: row; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+  }
+
+  .description div {
+    width: 33%;
+  }
+
+  .description div span {
+    font-weight: 700;
+  }
+
   /*ProductList*/
   .productlist article {
-    padding: 20px;
+    /* padding: 20px; */
     border-top: 1px solid var(--border-color);
     /* border-left: 1px solid #ccc; */
   }
@@ -400,10 +523,22 @@ dt {
 
   .info {
     order: 0;
+    padding: 40px 80px;
+    border-left: 1px solid var(--border-color);
   }
+  .description div {
+    border-left: 1px solid var(--border-color);
+  }
+  .description div p,
+  span {
+    margin-left: 20px;
+  }
+  /* .description :first-child {
+    border-left: 0px solid var(--border-color);
+  } */
+
   .purchaseBox {
-    /* order: 2; */
-    /* transform: translate(-50px, -100px); */
+    padding: 80px;
   }
 
   #seasons {
@@ -419,7 +554,7 @@ dt {
   }
 
   .season {
-    width: 100%;
+    /* width: 100%; */
     display: inline-flex;
     text-align: center;
   }
@@ -429,7 +564,27 @@ dt {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     border-left: 1px solid var(--border-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text {
+    color: var(--off-color);
+    font-size: 2.25rem;
+    font-weight: 700;
+    padding-left: 0px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .overlay {
+    width: 25%;
+    height: 100%;
+    background-color: #2a2b2a;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 1;
   }
 }

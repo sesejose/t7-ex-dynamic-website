@@ -183,7 +183,7 @@ small {
 
 hr {
   border: 1px solid var(--input-color);
-  margin: 3.052rem 0;
+  margin: 2rem 0;
 }
 
 /* Form
@@ -232,6 +232,7 @@ select {
   background-repeat: no-repeat;
   background-size: 1rem;
   background-position: center right 0.5rem;
+  border: none;
 }
 
 textarea {

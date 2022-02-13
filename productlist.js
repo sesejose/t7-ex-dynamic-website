@@ -5,6 +5,9 @@ const urlParams = new URLSearchParams(window.location.search);
 
 const season = urlParams.get("season");
 
+document.querySelector("h2").textContent = season;
+document.querySelector("h2").setAttribute("style", `padding-left:20px;`);
+
 const url = "https://kea-alt-del.dk/t7/api/products?season=" + season;
 
 fetch(url)
@@ -23,28 +26,13 @@ fetch(url)
 
 //And then we get the data
 //With a function with the argument "data" we callback a function "handleProductList" with the argument "data"
-//Then we define that function down here.
-//This function will loop through the data with forEach calling another function that will receive one item
+//This function will loop through the data with forEach calling another function that will receive one item.
 // Esto podria haber sido así: function handleProductList(data) {data.forEach(function (item) {showProduct(item)})}
 //But since it is already a function automatically get pass the item, we chose to write just the name of the function and define that function bellow.
 
 function handleProductList(data) {
   data.forEach(showProduct);
 }
-
-//Title Page Template
-function titlePage(product) {
-  const template = document.querySelector("#title").content;
-  const copy = template.cloneNode(true);
-  copy.querySelector("#title h2").textContent = `${product.season}`;
-
-  //Grab Parent of the product. We chose the place where we want to paste the clones.
-  const parent = document.querySelector("main");
-  //Append / Add product there in the parent in this case.
-  parent.appendChild(copy);
-}
-
-// titlePage();
 
 /* 
 <template id="productTemplate">
@@ -99,7 +87,6 @@ function showProduct(product) {
   clone.querySelector(".price").textContent =
     `DKK ` + `${product.price}` + `,-`;
 
-  //   clone.querySelector(".discounted p").textContent = `Now DKK ` + product.price * product.discount + `,-`;
   clone.querySelector(".discounted p").textContent =
     `Now DKK ` + `${(product.discount / 100) * product.price}` + `,-`;
   clone.querySelector(".discounted #discount").textContent =

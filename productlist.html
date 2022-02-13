@@ -22,16 +22,12 @@
         <ul id="mainmenu" class="menu-list">
           <li><a href="#">Categories</a></li>
           <li><a href="#">Brands</a></li>
-          <li><a href="category.html">Seasons</a></li>
+          <li><a href="index.html">Seasons</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <template id="title">
-        <article>
-          <h2>Season</h2>
-        </article>
-      </template>
+      <h2>Season</h2>
 
       <template id="productTemplate">
         <article class="smallProduct">
@@ -41,14 +37,16 @@
               src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
               alt="Sahara Team India Fanwear Round Neck Jersey"
             />
-            <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
-            <p class="subtle">Tshirts | Nike</p>
-            <p class="price"><span>Prev.</span> DKK 1595,-</p>
-            <div class="discounted">
-              <p>Now DKK 1560,-</p>
-              <p id="discount">-34%</p>
+            <div class="p20">
+              <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+              <p class="subtle">Tshirts | Nike</p>
+              <p class="price"><span>Prev.</span> DKK 1595,-</p>
+              <div class="discounted">
+                <p>Now DKK 1560,-</p>
+                <p id="discount">-34%</p>
+              </div>
+              <p id="link">Read More</p>
             </div>
-            <p id="link">Read More</p>
           </a>
         </article>
       </template>
@@ -114,5 +112,16 @@
     <!-- <script src="main.js"></script> -->
     <!-- <script src="product.js"></script> -->
     <script src="productlist.js"></script>
+    <!--MENU MOBILE-->
+    <script>
+      function openmenumobile() {
+        const x = document.getElementById("mainmenu");
+        if (x.style.display === "none") {
+          x.style.display = "inline-grid";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
